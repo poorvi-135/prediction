@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.area.label }}
+        {{ form.area }}
+        {% if form.area.errors %}
+            {% for error in form.area.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.furnishingstatus.label }}
+        {{ form.furnishingstatus }}
+        {% if form.furnishingstatus.errors %}
+            {% for error in form.furnishingstatus.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.mainroad.label }}
+        {{ form.mainroad }}
+        {% if form.mainroad.errors %}
+            {% for error in form.mainroad.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.airconditioning.label }}
+        {{ form.airconditioning }}
+        {% if form.airconditioning.errors %}
+            {% for error in form.airconditioning.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.parking.label }}
+        {{ form.parking }}
+        {% if form.parking.errors %}
+            {% for error in form.parking.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.basement.label }}
+        {{ form.basement }}
+        {% if form.basement.errors %}
+            {% for error in form.basement.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.total_rooms.label }}
+        {{ form.total_rooms }}
+        {% if form.total_rooms.errors %}
+            {% for error in form.total_rooms.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.hotwaterheating.label }}
+        {{ form.hotwaterheating }}
+        {% if form.hotwaterheating.errors %}
+            {% for error in form.hotwaterheating.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.guestroom.label }}
+        {{ form.guestroom }}
+        {% if form.guestroom.errors %}
+            {% for error in form.guestroom.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <div>
+        {{ output }}
+    </div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
+</form>
+{% endblock content %}
